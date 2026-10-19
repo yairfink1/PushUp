@@ -125,8 +125,8 @@ All storage keys use `pushup_` prefix (e.g., `pushup_date_key`, `pushup_pr_set`)
 
 ### App IDs & Dual-Release Architecture
 To allow testing new features live without resetting your workout history:
-- **Production App ID (`f4383b90-6800-4603-9dbe-0afa7b5b91df`)**: Used for the public release on `main`.
-- **Beta App ID (`90999ee4-98c8-4aa6-98b8-ff9980608e0b`)**: Used for live device testing on `beta`. Displays a distinct "BETA" badge on launcher icon and titles the app `"Push Ups (Beta)"`.
+- **Production App ID (`90999ee4-98c8-4aa6-98b8-ff9980608e0b`)**: Used for the public release on `main`.
+- **Beta App ID (`f4383b90-6800-4603-9dbe-0afa7b5b91df`)**: Used for live device testing on `beta`. Displays a distinct "BETA" badge on launcher icon and titles the app `"Push Ups (Beta)"`.
 - Both apps can be installed side-by-side on your watch simultaneously with zero storage collision!
 
 ### Build Commands

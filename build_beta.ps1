@@ -18,7 +18,7 @@ New-Item -ItemType Directory -Force -Path "bin" | Out-Null
 Write-Host "==========================================" -ForegroundColor Cyan
 Write-Host " Building PUSH-UP BETA App" -ForegroundColor Yellow
 Write-Host " Jungle: monkey-beta.jungle" -ForegroundColor Gray
-Write-Host " ID: 90999ee4-98c8-4aa6-98b8-ff9980608e0b" -ForegroundColor Gray
+Write-Host " ID: f4383b90-6800-4603-9dbe-0afa7b5b91df" -ForegroundColor Gray
 Write-Host "==========================================" -ForegroundColor Cyan
 
 if ($Target -eq "prg" -or $Target -eq "all") {
