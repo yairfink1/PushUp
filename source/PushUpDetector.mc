@@ -52,8 +52,8 @@ class PushUpDetector {
     private const WINDOW_SIZE          as Number = 25;
 
     // Forearm tilt & plank posture thresholds (in mG).
-    private const BASE_REP_THRESHOLD   as Number = 380;  // Y_smooth threshold to enter bottom-of-rep
-    private const BASE_RESET_THRESHOLD as Number = 250;  // Y_smooth return threshold at top-of-plank lockout
+    private const BASE_REP_THRESHOLD   as Number = 320;  // Y_smooth threshold to enter bottom-of-rep
+    private const BASE_RESET_THRESHOLD as Number = 240;  // Y_smooth return threshold at top-of-plank lockout
     private const X_LOCKOUT_MIN        as Number = 800;  // Min X_smooth required at top-of-plank lockout
     private const X_PLANK_MIN          as Number = 620;  // Min X_smooth required throughout a valid wave
     private const X_SETTLE_MIN         as Number = 800;  // Min X_smooth to confirm stable top-of-plank mount
@@ -69,7 +69,7 @@ class PushUpDetector {
     private var _mountStreakReq   as Number = 25;  // 0.25s initial plank orientation entry
     private var _settleStreakReq  as Number = 40;  // 0.40s quiet straight-arm plank settling
     private var _xLatchStreakLen  as Number = 35;  // 0.35s continuous departure to lock set
-    private var _minWaveDuration  as Number = 25;  // 0.25s minimum push-up wave duration
+    private var _minWaveDuration  as Number = 20;  // 0.20s minimum push-up wave duration
     private var _debounceMin      as Number = 65;  // 0.65s minimum peak-to-peak interval
     private var _debounceMax      as Number = 110; // 1.10s maximum adaptive debounce
 
@@ -126,7 +126,7 @@ class PushUpDetector {
         _xLatchStreakLen = (35 * rateScale).toNumber();
         if (_xLatchStreakLen < 3) { _xLatchStreakLen = 3; }
 
-        _minWaveDuration = (25 * rateScale).toNumber();
+        _minWaveDuration = (20 * rateScale).toNumber();
         if (_minWaveDuration < 5) { _minWaveDuration = 5; }
 
         _debounceMin = (65 * rateScale).toNumber();
@@ -319,7 +319,7 @@ class PushUpDetector {
             _peakAvg = (0.30 * peakY.toFloat()) + (0.70 * _peakAvg);
 
             var adaptedRep = (0.65 * _peakAvg).toNumber();
-            if (adaptedRep < 330) { adaptedRep = 330; }
+            if (adaptedRep < 280) { adaptedRep = 280; }
             if (adaptedRep > 420) { adaptedRep = 420; }
             _curRepThreshold = adaptedRep;
 

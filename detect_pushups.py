@@ -45,8 +45,8 @@ except ImportError:
 # ---------------------------------------------------------------------------
 DETECTOR_CONFIG: Dict[str, Any] = {
     "window_size":               25,    # samples (0.25s) — causal smoothing window for X and Y tilt
-    "rep_threshold":            380,    # mG — Y_smooth threshold to enter bottom-of-pushup (ARMED)
-    "reset_threshold":          250,    # mG — Y_smooth return threshold at top-of-plank lockout
+    "rep_threshold":            320,    # mG — Y_smooth threshold to enter bottom-of-pushup (ARMED)
+    "reset_threshold":          240,    # mG — Y_smooth return threshold at top-of-plank lockout
     "x_lockout_min":            800,    # mG — minimum X_smooth required at top-of-plank rep completion
     "x_plank_min":              620,    # mG — minimum X_smooth required throughout a valid push-up wave
     "x_settle_min":             800,    # mG — minimum X_smooth to confirm stable top-of-plank mount
@@ -55,7 +55,7 @@ DETECTOR_CONFIG: Dict[str, Any] = {
     "impact_mag_threshold":    1600,    # mG — floor hand-plant / push-off impact spike level
     "x_release_threshold":      450,    # mG — X below this = left plank position
     "x_latch_streak_len":        35,    # samples (0.35s) continuous departure to lock set
-    "min_wave_duration":         25,    # samples (0.25s) — minimum duration of a fast push-up cycle
+    "min_wave_duration":         20,    # samples (0.20s) — minimum duration of a fast push-up cycle
     "debounce_min":              65,    # samples (0.65s) — minimum interval between confirmed reps
     "debounce_max":             110,    # samples (1.10s) — maximum adaptive debounce
 }
@@ -440,7 +440,7 @@ def simulate_with_trace(
                     # Adaptive threshold update for deep fatigue sets
                     if len(confirmed_reps) >= 4:
                         peak_avg = 0.30 * float(wave_peak_y) + 0.70 * peak_avg
-                        cur_rep_threshold = max(330, min(420, int(0.65 * peak_avg)))
+                        cur_rep_threshold = max(280, min(420, int(0.65 * peak_avg)))
                         cur_reset_threshold = max(200, min(260, int(0.62 * cur_rep_threshold)))
                 else:
                     narrow_reps.append(wave_peak_idx)
