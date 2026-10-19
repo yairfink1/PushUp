@@ -123,8 +123,23 @@ Unlike pull-ups (where gravity pulls along the forearm axis overhead $X \approx 
 ### Storage Key Isolation
 All storage keys use `pushup_` prefix (e.g., `pushup_date_key`, `pushup_pr_set`) to avoid collision with PullUp app storage keys.
 
-### App ID
-The app uses a unique UUID `f4383b90-6800-4603-9dbe-0afa7b5b91df` (distinct from PullUp's `93ef5a4f-...`).
+### App IDs & Dual-Release Architecture
+To allow testing new features live without resetting your workout history:
+- **Production App ID (`f4383b90-6800-4603-9dbe-0afa7b5b91df`)**: Used for the public release on `main`.
+- **Beta App ID (`90999ee4-98c8-4aa6-98b8-ff9980608e0b`)**: Used for live device testing on `beta`. Displays a distinct "BETA" badge on launcher icon and titles the app `"Push Ups (Beta)"`.
+- Both apps can be installed side-by-side on your watch simultaneously with zero storage collision!
+
+### Build Commands
+- **Build Beta (`bin/PushUp-Beta.prg` or `.iq`)**:
+  ```powershell
+  powershell -File .\build_beta.ps1 -Target prg
+  powershell -File .\build_beta.ps1 -Target iq
+  ```
+- **Build Production (`bin/PushUp.prg` or `.iq`)**:
+  ```powershell
+  powershell -File .\build_prod.ps1 -Target prg
+  powershell -File .\build_prod.ps1 -Target iq
+  ```
 
 ---
 
@@ -135,10 +150,13 @@ The app uses a unique UUID `f4383b90-6800-4603-9dbe-0afa7b5b91df` (distinct from
 
 ---
 
-## 8. Git Repository Integration & Workflow
+## 8. Git Repository Integration & Dual-Branch Workflow
 
 - **Isolated Repository**: `PushUp` is configured as an independent Git repository located at `c:\Users\TLP-001\Documents\Garmin\PushUp`.
-- **Primary Branch**: `main`.
+- **Branch Hierarchy**:
+  - `feat/*`: Topic / feature branches for new development or tuning.
+  - `beta`: The active staging branch. Features merge here first $\to$ build and test `bin/PushUp-Beta.prg` on watch.
+  - `main`: The public production release. Merged from `beta` after live workout verification $\to$ build `bin/PushUp.iq` for store release.
 - **Security & Build Exclusions (`.gitignore`)**:
   - **Signing Keys**: `developer_key*`, `*.der`, `*.pem`, `*.key` are strictly ignored and must NEVER be committed.
   - **Binaries & Packages**: `bin/`, `*.prg`, `*.iq`, `*.bin`.
