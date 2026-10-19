@@ -52,8 +52,8 @@ class PushUpDetector {
     private const WINDOW_SIZE          as Number = 25;
 
     // Forearm tilt & plank posture thresholds (in mG).
-    private const BASE_REP_THRESHOLD   as Number = 320;  // Y_smooth threshold to enter bottom-of-rep
-    private const BASE_RESET_THRESHOLD as Number = 240;  // Y_smooth return threshold at top-of-plank lockout
+    private const BASE_REP_THRESHOLD   as Number = 265;  // Y_smooth threshold to enter bottom-of-rep
+    private const BASE_RESET_THRESHOLD as Number = 195;  // Y_smooth return threshold at top-of-plank lockout
     private const X_LOCKOUT_MIN        as Number = 800;  // Min X_smooth required at top-of-plank lockout
     private const X_PLANK_MIN          as Number = 620;  // Min X_smooth required throughout a valid wave
     private const X_SETTLE_MIN         as Number = 800;  // Min X_smooth to confirm stable top-of-plank mount

@@ -45,8 +45,8 @@ except ImportError:
 # ---------------------------------------------------------------------------
 DETECTOR_CONFIG: Dict[str, Any] = {
     "window_size":               25,    # samples (0.25s) — causal smoothing window for X and Y tilt
-    "rep_threshold":            320,    # mG — Y_smooth threshold to enter bottom-of-pushup (ARMED)
-    "reset_threshold":          240,    # mG — Y_smooth return threshold at top-of-plank lockout
+    "rep_threshold":            265,    # mG — Y_smooth threshold to enter bottom-of-pushup (ARMED)
+    "reset_threshold":          195,    # mG — Y_smooth return threshold at top-of-plank lockout
     "x_lockout_min":            800,    # mG — minimum X_smooth required at top-of-plank rep completion
     "x_plank_min":              620,    # mG — minimum X_smooth required throughout a valid push-up wave
     "x_settle_min":             800,    # mG — minimum X_smooth to confirm stable top-of-plank mount
