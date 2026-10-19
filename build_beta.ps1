@@ -33,4 +33,4 @@ if ($Target -eq "iq" -or $Target -eq "all") {
     if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 }
 
-Write-Host "`n✓ Push-Up Beta build complete!" -ForegroundColor Green
+Write-Host "`n[OK] PushUp Beta build complete!" -ForegroundColor Green
