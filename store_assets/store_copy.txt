@@ -1,0 +1,67 @@
+================================================================================
+THE AMAZING PUSH UP - CONNECT IQ STORE LISTING
+================================================================================
+
+APP TITLE:
+The Amazing Push Up - Workout & Reps
+
+APP TYPE:
+Watch App
+
+CATEGORY:
+Fitness & Gym / Sports
+
+SHORT DESCRIPTION / TAGLINE:
+Automatic 100 Hz push-up rep counter, multi-set rest timer & progress tracker. 100% Free!
+
+================================================================================
+IMAGE SPECIFICATIONS & ASSETS READY FOR UPLOAD:
+================================================================================
+1. COVER IMAGE / APP ICON:
+   - File: store_assets/cover_image_500x500.png (or cover_image_500x500.jpg / icon_500.png)
+   - Dimensions: 500 x 500 px
+   - Size: ~66–126 KB (Required: < 300 KB) - PASS
+
+2. HERO PROMOTIONAL BANNER:
+   - File: store_assets/hero_banner_1440x720.jpg
+   - Dimensions: 1440 x 720 px
+   - Size: < 2048 KB - PASS
+
+================================================================================
+FULL STORE DESCRIPTION (Copy & paste into Garmin Developer Dashboard):
+================================================================================
+Elevate your push-up training with The Amazing Push Up!
+
+100% Free! Support independent development:
+Buy Me a Coffee: https://buymeacoffee.com/yair.garmin
+
+Tired of manually tapping your watch or losing count mid-set? The Amazing Push Up uses smart 100 Hz motion processing to count your reps automatically and accurately live on your wrist. Whether you're knocking out quick sets throughout the day or full calisthenics workouts, every single rep counts.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+KEY FEATURES:
+
+1. AUTOMATIC & ACCURATE REP COUNTING
+Smart motion detection automatically counts every push-up repetition from top plank to bottom lockout and ignores floor setup and dismount movements—just get into plank position and start pushing.
+
+2. QUICK SETS OR MULTI-SET WORKOUTS
+• Quick Set: Drop down for a single standalone set anytime—ideal for daily volume and grease-the-groove training.
+• Multi-Set Workout: Structured sessions with dedicated rest timers between sets.
+
+3. TRACK PROGRESS & BEAT YOUR RECORDS
+Track your daily and 7-day volume to build consistency, and chase your all-time Personal Records (Best Set, Best Day, Best Week) with celebratory gold screens and vibration alerts!
+
+4. WIDGET GLANCE & GARMIN CONNECT SYNC
+Check daily/weekly totals right from your watch's glance carousel, and sync all sessions directly to Garmin Connect as Strength Training activities with developer rep fields.
+
+5. 100% FREE TO USE
+No paywalls, no subscriptions, and no trial expirations.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SUPPORT INDEPENDENT DEVELOPMENT:
+
+If you enjoy this free app, consider supporting future updates:
+Buy Me a Coffee: https://buymeacoffee.com/yair.garmin
+
+Have feedback or ideas? Leave a rating or reach out via "Contact Developer"!
