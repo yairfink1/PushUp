@@ -95,7 +95,7 @@ Unlike pull-ups (where gravity pulls along the forearm axis overhead $X \approx 
 
 ## 5. Dataset & Benchmark Performance
 
-- **Active Dataset**: 7 verified `.fit` workout sets recorded live on Garmin Forerunner 165 Music:
+- **Active Dataset**: 23 verified `.fit` workout sets recorded live on Garmin Forerunner 165 Music:
   1. `2026-10-17-18-32-46_pushup_10reps_24760030440.fit` (10 reps)
   2. `2026-10-17-18-33-38_pushup_5reps_24760033303.fit` (5 reps)
   3. `2026-10-18-14-15-45_pushup_7reps_24768887775.fit` (7 reps)
@@ -103,9 +103,25 @@ Unlike pull-ups (where gravity pulls along the forearm axis overhead $X \approx 
   5. `2026-10-18-14-16-32_pushup_6reps_24768894579.fit` (6 reps)
   6. `2026-10-18-14-22-14_pushup_8reps_24768970087.fit` (8 reps)
   7. `2026-10-18-15-08-27_pushup_15reps_24769590980.fit` (15 reps)
+  8. `2026-10-18-17-37-08_pushup_11reps_24771318675.fit` (11 reps)
+  9. `2026-10-18-20-31-19_pushup_2reps_24772529760.fit` (2 reps)
+  10. `2026-10-19-12-03-26_pushup_20reps_24777798323.fit` (20 reps)
+  11. `2026-10-19-16-23-50_pushup_16reps_24780636924.fit` (16 reps)
+  12. `2026-10-19-16-32-32_pushup_4reps_24780757001.fit` (4 reps)
+  13. `2026-10-19-19-19-55_pushup_5reps_24782884639.fit` (5 reps)
+  14. `2026-10-19-19-20-11_pushup_5reps_24782885043.fit` (5 reps)
+  15. `2026-10-19-20-14-37_pushup_5reps_24783331305.fit` (5 reps)
+  16. `2026-10-19-20-41-28_pushup_3reps_24783520246.fit` (3 reps)
+  17. `2026-10-19-20-43-27_pushup_6reps_24783536189.fit` (6 reps)
+  18. `2026-10-19-20-43-47_pushup_3reps_24783536508.fit` (3 reps)
+  19. `2026-10-20-04-53-07_pushup_10reps_24786270884.fit` (10 reps)
+  20. `2026-10-20-15-46-38_pushup_17reps_24792306583.fit` (17 reps)
+  21. `2026-10-21-06-19-53_pushup_15reps_24799093989.fit` (15 reps)
+  22. `2026-10-21-18-54-18_pushup_20reps_24806704981.fit` (20 reps)
+  23. `2026-10-25-09-27-42_pushup_25reps_24843772443.fit` (25 reps)
 - **Benchmark Accuracy**:
-  - **Exact Match Accuracy**: **7 / 7 (100.0%)**
-  - **Parity**: **7 / 7 (100.0%)** between Monkey C `PushUpDetector.mc` and Python `detect_pushups.py`.
+  - **Exact Match Accuracy**: **23 / 23 (100.0%)**
+  - **Parity**: **23 / 23 (100.0%)** between Monkey C `PushUpDetector.mc` and Python `detect_pushups.py`.
 
 ---
 
